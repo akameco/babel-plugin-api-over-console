@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-api-over-console",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "My splendid module",
   "license": "MIT",
   "repository": "akameco/babel-plugin-api-over-console",
