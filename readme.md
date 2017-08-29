@@ -20,13 +20,16 @@ $ npm install --save-dev babel-plugin-api-over-console
 }
 ```
 
+#### In
+
 ```js
 console.log('hello')
+```
 
 
-↓ ↓ ↓ ↓ ↓
+#### Out
 
-
+```js
 const express = require('express');
 
 const cors = require('cors');
