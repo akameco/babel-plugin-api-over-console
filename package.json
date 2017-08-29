@@ -1,7 +1,7 @@
 {
   "name": "babel-plugin-api-over-console",
   "version": "0.1.0",
-  "description": "My splendid module",
+  "description": "Transform CLI app to express API",
   "license": "MIT",
   "repository": "akameco/babel-plugin-api-over-console",
   "author": {
