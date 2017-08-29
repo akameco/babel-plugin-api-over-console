@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`1. api-over-console 1`] = `
+"
+console.log('hello')
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const express = require('express');
+
+const cors = require('cors');
+
+const app = express();
+const port = process.env.PORT || 3000;
+app.use(cors());
+app.get('/', (req, res) => {
+  res.json('hello');
+});
+app.listen(port, () => {
+  console.log('listening on %s', port);
+});
+"
+`;
+
+exports[`2. api-over-console 1`] = `
+"
+function hello () {}
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+function hello() {}
+"
+`;
+
+exports[`3. api-over-console 1`] = `
+"
+var a = 1
+console.log(a)
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const express = require('express');
+
+const cors = require('cors');
+
+const app = express();
+const port = process.env.PORT || 3000;
+app.use(cors());
+app.get('/', (req, res) => {
+  var a = 1;
+  res.json(a);
+});
+app.listen(port, () => {
+  console.log('listening on %s', port);
+});
+"
+`;
+
+exports[`4. api-over-console 1`] = `
+"
+const obj = {a: 1, b: 2, c: 3}
+console.log(obj)
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const express = require('express');
+
+const cors = require('cors');
+
+const app = express();
+const port = process.env.PORT || 3000;
+app.use(cors());
+app.get('/', (req, res) => {
+  const obj = { a: 1, b: 2, c: 3 };
+  res.json(obj);
+});
+app.listen(port, () => {
+  console.log('listening on %s', port);
+});
+"
+`;
+
+exports[`5. api-over-console 1`] = `
+"
+console.log('hello')
+console.log('world')
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const express = require('express');
+
+const cors = require('cors');
+
+const app = express();
+const port = process.env.PORT || 3000;
+app.use(cors());
+app.get('/', (req, res) => {
+  res.json('hello');
+
+  console.log('world');
+});
+app.listen(port, () => {
+  console.log('listening on %s', port);
+});
+"
+`;
+
+exports[`6. api-over-console 1`] = `
+"
+const args = process.argv.slice(2)
+console.log({name: args[1]})
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const express = require('express');
+
+const cors = require('cors');
+
+const app = express();
+const port = process.env.PORT || 3000;
+app.use(cors());
+app.get('/', (req, res) => {
+  const args = __API_OVER_CONSOLE__obj2Argv(req.query).slice(2);
+  res.json({ name: args[1] });
+});
+app.listen(port, () => {
+  console.log('listening on %s', port);
+});
+
+function __API_OVER_CONSOLE__obj2Argv(obj) {
+  return Object.keys(obj).reduce((prev, key) => [...prev, '--' + key, obj[key]], [null, null]);
+}
+"
+`;
+
+exports[`7. api-over-console 1`] = `
+"
+console.log()
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+console.log();
+"
+`;

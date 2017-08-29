@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "start": "node server.js",
+    "cli": "node app.js",
+    "build": "node build.js"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.15.4"
+  }
+}

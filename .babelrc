@@ -1,0 +1,4 @@
+{
+  "presets": [["env", { "target": "node" }]],
+  "plugins": ["transform-flow-strip-types"]
+}

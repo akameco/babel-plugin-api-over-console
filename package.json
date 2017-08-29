@@ -1,0 +1,50 @@
+{
+  "name": "babel-plugin-api-over-console",
+  "version": "0.0.0",
+  "description": "My splendid module",
+  "license": "MIT",
+  "repository": "akameco/babel-plugin-api-over-console",
+  "author": {
+    "name": "akameco",
+    "email": "akameco.t@gmail.com",
+    "url": "akameco.github.io"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "prettier": "prettier --write --single-quote --no-semi '**/*.js'",
+    "build": "babel src -d lib --ignore *.test.js",
+    "prepublishOnly": "npm run build",
+    "lint": "eslint src",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "babel-plugin",
+    "cli",
+    "api",
+    "console",
+    "console.log",
+    "api-over-console"
+  ],
+  "dependencies": {
+    "babel-template": "^6.26.0",
+    "babel-traverse": "^6.26.0"
+  },
+  "devDependencies": {
+    "babel-log": "^2.0.0",
+    "babel-plugin-tester": "^4.0.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.5.0",
+    "eslint-config-precure": "^0.8.0",
+    "flow-bin": "^0.53.1",
+    "jest": "^20.0.4",
+    "prettier": "^1.5.3"
+  }
+}
