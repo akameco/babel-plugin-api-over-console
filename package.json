@@ -15,7 +15,7 @@
   "scripts": {
     "prettier": "prettier --write src/*.js examples/**/*.js",
     "build": "babel src -d lib --ignore *.test.js",
-    "prepublishOnly": "npm run build",
+    "prepare": "npm run build",
     "lint": "eslint src",
     "test": "jest",
     "test:watch": "jest --watch"
